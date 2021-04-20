@@ -37,5 +37,26 @@ At "weather" root:
 yarn local
 ```
 
+### Unit Tests
+```
+cd client
+yarn test
+```
+------------------|---------|----------|---------|---------|-------------------
+File              | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+------------------|---------|----------|---------|---------|-------------------
+All files         |   98.41 |    86.11 |   97.56 |   98.39 |                   
+ features/search  |   97.85 |    80.85 |   96.67 |   97.83 |                   
+  Search.js       |     100 |     87.5 |     100 |     100 | 59-78             
+  searchSlice.js  |   96.36 |    73.91 |   93.33 |   96.36 | 42-43             
+ features/weather |     100 |       96 |     100 |     100 |                   
+  Weather.js      |     100 |      100 |     100 |     100 |                   
+  weatherSlice.js |     100 |    88.89 |     100 |     100 | 53                
+ store            |     100 |      100 |     100 |     100 |                   
+  store.js        |     100 |      100 |     100 |     100 |                   
+------------------|---------|----------|---------|---------|-------------------
+
+Test Suites: 3 passed, 3 total
+Tests:       30 passed, 30 total
 
 ## Live demo link is coming soon...
