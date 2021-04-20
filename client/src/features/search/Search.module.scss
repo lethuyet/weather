@@ -1,0 +1,123 @@
+%icon {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: var(--input-height);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(../../assets/img/search.svg);
+  pointer-events: none;
+}
+
+.form {
+  --input-height: 60px;
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+  position: relative;
+  z-index: 10;
+  &:before {
+    @extend %icon;
+    background-size: 30px;
+    height: var(--input-height);
+  }
+
+  input {
+    -webkit-appearance: none;
+    display: block;
+    width: 100%;
+    height: var(--input-height);
+    border-radius: calc(0.5 * var(--input-height));
+    box-shadow: 0 1px 8px 0 rgba(black, .8);
+    border: none;
+    outline: none;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    font-size: 20px;
+    padding-inline-start: var(--input-height);
+    padding-inline-end: var(--input-height);
+    background-color: rgba(white, .7);
+    transition: background-color .2s;
+
+    &::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+      position: absolute;
+      right: calc(var(--input-height)/4);
+      top: 50%;
+      height: 1em;
+      width: 1em;
+      margin-top: -0.5em;
+      border-radius: 50em;
+      background: url(../../assets/img/times-circle.svg) no-repeat 50% 50%;
+      background-size: contain;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    &:focus {
+      background-color: rgba(white, .95);
+      &::-webkit-search-cancel-button{
+        opacity: 0.3;
+        pointer-events: all;
+      }
+    }
+  }
+
+  ul {
+    + input {
+      box-shadow: 0 1px 6px 0 rgb(32 33 36 / 10%);
+    }
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    background: white;
+    box-shadow: 0 1px 8px 0 rgba(black, .8);
+    border-radius: calc(0.5 * var(--input-height));
+    list-style: none;
+    text-align: left;
+    max-height: 300px;
+    overflow: auto;
+    overflow-x: hidden;
+  }
+
+  li {
+    &:first-child .btn{
+      padding-top: calc(10px + var(--input-height));
+      &:before{
+        top: auto;
+        bottom: 0;
+      }
+    }
+    &.highlight {
+      .btn {
+        background-color: #e9e9e9;
+        color: black;
+      }
+    }
+  }
+
+  .btn {
+    position: relative;
+    display: block;
+    text-align-last: left;
+    width: 100%;
+    padding: 10px 10px 10px var(--input-height);
+    border: none;
+    background: none;
+    font-size: 20px;
+    color: #333;
+    &:before {
+      @extend %icon;
+      background-size: 20px;
+      height: 43px;
+      opacity: 0.8;
+    }
+  }
+}

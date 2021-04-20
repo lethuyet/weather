@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: white;
+}
+
+:global #root {
+  position: relative;
+}
+
+:global #bg {
+  position: fixed;
+  z-index: -1;
+  opacity: 0.95;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-image: url('assets/img/blue-sky.png');
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    opacity: .05;
+  }
+}
+
+:global .loader{
+  --dot-size: 2.5em;
+  color: white;
+  font-size: 10px;
+  margin: 80px auto;
+  position: relative !important;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+  display: block;
+
+  span{
+    position: absolute;
+    left:50%;
+    top: 100%;
+    white-space: nowrap;
+    margin-top: var(--dot-size);
+    font-size: 1.5em;
+    color: #fafafa;
+    transform: translateX(-50%);
+  }
+
+  &,
+  &:before,
+  &:after {
+    & :local{
+      content: '';
+      position: absolute;
+      top: 0;  
+      border-radius: 50%;
+      width: var(--dot-size);
+      height: var(--dot-size);
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      -webkit-animation: loader 1.8s infinite ease-in-out;
+      animation: loader 1.8s infinite ease-in-out;
+    }
+  }
+
+  &:before {
+    left: calc(var(--dot-size) * -1 - 1em);
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+  }
+
+  &:after {
+    left: calc(var(--dot-size) + 1em);
+  }
+
+}
+
+@keyframes loader {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 var(--dot-size) 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 var(--dot-size) 0 0;
+  }
+}

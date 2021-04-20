@@ -1,0 +1,1 @@
+export const apiPrefix = 'https://pacific-gorge-15013.herokuapp.com/https://www.metaweather.com/api';
