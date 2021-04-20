@@ -36,7 +36,7 @@ At "weather" root:
 ```
 yarn local
 ```
-
+You can then access the app at "https://localhost:3000/"
 ### Unit Tests
 ```
 cd client
