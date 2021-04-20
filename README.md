@@ -11,7 +11,7 @@
 3. 5-days weather forecast
 4. Mobile/tablet/desktop friendly
 
-*(please note that, we're using a self-signed certificate to serve HTTPS, so please feel free to procced when browsers show warning regarding security)*
+*(please note that, when running locally, we're using a self-signed certificate to serve HTTPS, so please feel free to procced when browsers show security warning)*
 
 ## App services
 1. React app:
