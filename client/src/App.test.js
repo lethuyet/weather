@@ -22,16 +22,16 @@ describe('App Component', () => {
     useDispatchSpy.mockReturnValue(mockDispatchFn);
   });
 
-  test('renders header text', () => {
-    const { getByText } = render(
+  test('renders search box', () => {
+    const { getByPlaceholderText } = render(
       <Provider store={store}>
         <App />
       </Provider>
     );
 
-    const heading = getByText('Weather Forecast');
+    const input = getByPlaceholderText('Enter a city name...');
 
-    expect(heading).toBeInTheDocument();
+    expect(input).toBeInTheDocument();
   });
 
   test('geolocation getCurrentPosition success', () => {
