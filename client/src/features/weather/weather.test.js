@@ -7,7 +7,6 @@ import {
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import fetchMock from 'fetch-mock';
-import { apiPrefix } from '../../utils/apiPrefix';
 import slice, { initialState, foreCast } from './weatherSlice';
 import { Provider } from 'react-redux';
 import { store } from '../../store/store';
@@ -54,7 +53,7 @@ describe('Weather Slice - async actions - foreCast', () => {
       },
     };
 
-    fetchMock.getOnce(`${apiPrefix}/location/${location.woeid}/`, {
+    fetchMock.getOnce(`/api/location/${location.woeid}`, {
       body: null,
       status: 200,
       headers: { 'content-type': 'application/json' },
@@ -99,7 +98,7 @@ describe('Weather Slice - async actions - foreCast', () => {
       },
     };
 
-    fetchMock.getOnce(`${apiPrefix}/location/${location.woeid}/`, {
+    fetchMock.getOnce(`/api/location/${location.woeid}`, {
       body: results,
       status: 200,
       headers: { 'content-type': 'application/json' },
@@ -125,7 +124,7 @@ describe('Weather Slice - async actions - foreCast', () => {
       },
     };
 
-    fetchMock.getOnce(`${apiPrefix}/location/${location.woeid}/`, {
+    fetchMock.getOnce(`/api/location/${location.woeid}`, {
       body: null,
       headers: { 'content-type': 'application/json' },
       status: 500,
@@ -185,7 +184,7 @@ describe('Weather Component', () => {
       sources: [],
     };
 
-    fetchMock.getOnce(`${apiPrefix}/location/${location.woeid}/`, {
+    fetchMock.getOnce(`/api/location/${location.woeid}`, {
       body: results,
       status: 200,
       headers: { 'content-type': 'application/json' },

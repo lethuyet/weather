@@ -7,7 +7,6 @@ import {
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import fetchMock from 'fetch-mock';
-import { apiPrefix } from '../../utils/apiPrefix';
 import slice, { initialState, search, searchLattLong } from './searchSlice';
 import { Provider } from 'react-redux';
 import { store } from '../../store/store';
@@ -168,7 +167,7 @@ describe('Search Slice - async actions - search', () => {
       },
     };
 
-    fetchMock.getOnce(`${apiPrefix}/location/search/?query=${query}`, {
+    fetchMock.getOnce(`/api/search/query/${query}`, {
       body: results,
       status: 200,
       headers: { 'content-type': 'application/json' },
@@ -200,7 +199,7 @@ describe('Search Slice - async actions - search', () => {
       },
     };
 
-    fetchMock.getOnce(`${apiPrefix}/location/search/?query=${query}`, {
+    fetchMock.getOnce(`/api/search/query/${query}`, {
       body: null,
       headers: { 'content-type': 'application/json' },
       status: 500,
@@ -267,7 +266,7 @@ describe('Search Slice - async actions - searchLattLong', () => {
     };
 
     fetchMock.getOnce(
-      `${apiPrefix}/location/search/?lattlong=${position.coords.latitude},${position.coords.longitude}`,
+      `/api/search/lattlong/${position.coords.latitude},${position.coords.longitude}`,
       {
         body: results,
         status: 200,
@@ -301,7 +300,7 @@ describe('Search Slice - async actions - searchLattLong', () => {
     };
 
     fetchMock.getOnce(
-      `${apiPrefix}/location/search/?lattlong=${position.coords.latitude},${position.coords.longitude}`,
+      `/api/search/lattlong/${position.coords.latitude},${position.coords.longitude}`,
       {
         body: null,
         headers: { 'content-type': 'application/json' },
@@ -344,7 +343,7 @@ describe('Search Component', () => {
       },
     ];
 
-    fetchMock.getOnce(`${apiPrefix}/location/search/?query=${query}`, {
+    fetchMock.getOnce(`/api/search/query/${query}`, {
       body: results,
       status: 200,
       headers: { 'content-type': 'application/json' },
@@ -374,7 +373,7 @@ describe('Search Component', () => {
       },
     ];
 
-    fetchMock.getOnce(`${apiPrefix}/location/search/?query=${query}`, {
+    fetchMock.getOnce(`/api/search/query/${query}`, {
       body: results,
       status: 200,
       headers: { 'content-type': 'application/json' },
@@ -409,7 +408,7 @@ describe('Search Component', () => {
       },
     ];
 
-    fetchMock.getOnce(`${apiPrefix}/location/search/?query=${query}`, {
+    fetchMock.getOnce(`/api/search/query/${query}`, {
       body: results,
       status: 200,
       headers: { 'content-type': 'application/json' },
@@ -448,7 +447,7 @@ describe('Search Component', () => {
       },
     ];
 
-    fetchMock.getOnce(`${apiPrefix}/location/search/?query=${query}`, {
+    fetchMock.getOnce(`/api/search/query/${query}`, {
       body: results,
       status: 200,
       headers: { 'content-type': 'application/json' },
