@@ -3,6 +3,8 @@
 ## [Live Demo](https://thuyet-weather.herokuapp.com/)
 (deployed on Heroku)
 
+![image](https://user-images.githubusercontent.com/1750561/115340311-9f21e400-a1d0-11eb-811b-e6adb77479c2.png)
+
 ## Features:
 1. Location auto detection for local weather forecast (requires HTTPS*)
 2. Search box with auto-complete suggestions, up/down navigation with arrow keys, high performance with flexible throttled/debounced and cached
