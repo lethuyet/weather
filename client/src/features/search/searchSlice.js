@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import {apiPrefix} from '../../utils/apiPrefix';
 
 export const initialState = {
   query: '',
