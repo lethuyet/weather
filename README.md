@@ -1,5 +1,8 @@
 # Weather APP
 
+## [Live Demo](https://thuyet-weather.herokuapp.com/)
+(deployed on Heroku)
+
 ## Features:
 1. Location auto detection for local weather forecast (requires HTTPS*)
 2. Search box with auto-complete suggestions, up/down navigation with arrow keys, high performance with flexible throttled/debounced and cached
@@ -58,5 +61,3 @@ All files         |   98.41 |    86.11 |   97.56 |   98.39 |
 
 Test Suites: 3 passed, 3 total
 Tests:       30 passed, 30 total
-
-## Live demo link is coming soon...
