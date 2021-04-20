@@ -28,7 +28,6 @@ export const search = createAsyncThunk(
 
     try {
       const res = await fetch(
-        // `${apiPrefix}/location/search/?query=${query}`
         `/api/search/query/${query}`
       );
       if (res.status !== 200) {
@@ -59,7 +58,6 @@ export const searchLattLong = createAsyncThunk(
     const long = position.coords.longitude;
     try {
       const res = await fetch(
-        // `${apiPrefix}/location/search/?lattlong=${latt},${long}`
         `/api/search/lattlong/${latt},${long}`
       );
       if (res.status !== 200) {

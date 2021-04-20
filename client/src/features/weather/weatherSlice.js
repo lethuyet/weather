@@ -25,7 +25,6 @@ export const foreCast = createAsyncThunk(
     }
     try {
       const res = await fetch(
-        // `${apiPrefix}/location/${location.woeid}`
         `/api/location/${location.woeid}`
       );
       if (res.status !== 200) {
