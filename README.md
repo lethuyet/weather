@@ -5,6 +5,9 @@
 
 ![image](https://user-images.githubusercontent.com/1750561/115340311-9f21e400-a1d0-11eb-811b-e6adb77479c2.png)
 
+https://user-images.githubusercontent.com/1750561/115493734-80822280-a28e-11eb-87c4-8051a532b7f2.mp4
+
+
 ## Features:
 1. Location auto detection for local weather forecast (requires HTTPS*)
 2. Search box with auto-complete suggestions, up/down navigation with arrow keys, high performance with flexible throttled/debounced and cached
@@ -47,7 +50,6 @@ You can then access the app at "https://localhost:3000/"
 cd client
 yarn test
 ```
-------------------|---------|----------|---------|---------|-------------------
 File              | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ------------------|---------|----------|---------|---------|-------------------
 All files         |   98.41 |    86.11 |   97.56 |   98.39 |                   
@@ -59,7 +61,8 @@ All files         |   98.41 |    86.11 |   97.56 |   98.39 |
   weatherSlice.js |     100 |    88.89 |     100 |     100 | 53                
  store            |     100 |      100 |     100 |     100 |                   
   store.js        |     100 |      100 |     100 |     100 |                   
-------------------|---------|----------|---------|---------|-------------------
 
-Test Suites: 3 passed, 3 total
-Tests:       30 passed, 30 total
+
+![#009900](https://via.placeholder.com/15/009900/000000?text=+) Test Suites: 3 passed, 3 total
+
+![#009900](https://via.placeholder.com/15/009900/000000?text=+) Tests: 30 passed, 30 total
