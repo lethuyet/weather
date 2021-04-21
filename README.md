@@ -1,4 +1,4 @@
-# Weather APP
+# Weather App
 
 ## [Live Demo](https://thuyet-weather.herokuapp.com/)
 (deployed on Heroku)
